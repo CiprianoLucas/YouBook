@@ -64,5 +64,7 @@ def arm_usuario():
         print(usuarios.get(f'{ID}'))
         print(f'id: {ID}')
 
+    print("oii")
+
 
 
