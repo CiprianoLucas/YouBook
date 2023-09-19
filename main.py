@@ -2,7 +2,7 @@ import re
 livros = {
 
 }
-usuarios = {'U1': {'nome': 'Pedro Dal', 'idade': '18', 'usuario': 'yushn', 'email': 'pedrobellezia@gmail.com', 'senha': 'pedro123'}
+usuarios = {
             }
 
 def listar_livros(livros: dict) -> None:
