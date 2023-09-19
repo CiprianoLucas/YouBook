@@ -2,7 +2,7 @@ import re
 livros = {
 
 }
-usuarios = {
+usuarios = {'U1': {'nome': 'Pedro Dal', 'idade': '18', 'usuario': 'yushn', 'email': 'pedrobellezia@gmail.com', 'senha': 'pedro123'}
             }
 
 def listar_livros(livros: dict) -> None:
@@ -64,7 +64,41 @@ def arm_usuario():
         print(usuarios.get(f'{ID}'))
         print(f'id: {ID}')
 
-    print("oii")
+
+def login():
+    checagem_de_login = False
+    while not checagem_de_login:
+        contagem_usuario = 0
+        contagem_senha = 0
+        login_usuario = input("digite o seu e-mail ou nome de usuário")
+        senha_usuario = input("digite a sua senha")
+        for chaves in usuarios:
+            login_check_u = usuarios[chaves].get('usuario')
+            login_check_e = usuarios[chaves].get('email')
+            if login_check_u == login_usuario or login_check_e == login_usuario:
+                contagem_usuario += 1
+            else:
+                continue
+        if contagem_usuario == 1:
+            for keys in usuarios:
+                senha_check = usuarios[keys].get('senha')
+                if senha_check == senha_usuario:
+                    contagem_senha += 1
+                else:
+                    continue
+            if contagem_senha == 1:
+                print("Login realizado com sucesso")
+                checagem_de_login = True
+            else:
+                print("senha incorreta")
+                continue
+        else:
+            escolha = input("este nome de usuário não esta no nosso sistema, digite 'sim' caso queira realizar um "
+                            "cadastro, se quiser realizar o login novamente pressione Enter ")
+            if escolha == 'sim':
+                arm_usuario()
+            else:
+                continue
 
 
 
