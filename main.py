@@ -5,7 +5,7 @@ lista_livros = {
 
 def listar_livros(livros: dict) -> None:
     """
-    Faz um print com todos os livros em ordem do último lançado para o mais antigo
+    Faz um print com todos os livros em ordem do último lançado para o mais
     :return: None
     """
     listagem = ""
