@@ -13,5 +13,7 @@ def listar_livros(livros: list)-> None:
             lançamento: {i["lancamento"]}
             gênero: {i["genero"]}
             avaliações: {i["avaliacoes"]}
-            sinopse: {i["sinopse"]}"""
+            sinopse: {i["sinopse"]}
+            """
 
+para = "teste"
