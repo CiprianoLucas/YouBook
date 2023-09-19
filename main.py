@@ -1,7 +1,9 @@
-lista_livros = {
-    "L1": {"nome": "O menino", "autor": "Lucas", "lancamento": 2022, "genero": "Infantil", "avaliacoes": [3, 5], "sinopse": "algo legal"},
-    "L2": {"nome": "Outro", "autor": "Vanessa", "lancamento": 1990, "genero": "Ação", "avaliacoes": [2, 5], "sinopse": "menos legal"}}
+import re
+livros = {
 
+}
+usuarios = {
+            }
 
 def listar_livros(livros: dict) -> None:
     """
@@ -22,4 +24,4 @@ def listar_livros(livros: dict) -> None:
     print(listagem)
 
 
-listar_livros(lista_livros)
+
