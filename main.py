@@ -1,11 +1,11 @@
 import re
 
 livros = {
-    "L1": {"nome": "O menino", "autor": "Lucas", "lancamento": 2022, "genero": "Infantil", "avaliacoes": [3, 5], "sinopse": "algo legal"},
-    "L2": {"nome": "Outro", "autor": "Vanessa", "lancamento": 1990, "genero": "Ação", "avaliacoes": [2, 5], "sinopse": "menos legal"}}
+    }
 
 usuarios = {
             }
+
 
 def listar_livros(livros: dict) -> None:
     """
@@ -15,45 +15,52 @@ def listar_livros(livros: dict) -> None:
     listagem = ""
     for chave, dicionario in livros.items():
         listagem = f"""
-            Nome: {dicionario["nome"]}
+            Titulo: {dicionario["titulo"]}
             Autor: {dicionario["autor"]}
-            lançamento: {dicionario["lancamento"]}
-            gênero: {dicionario["genero"]}
-            avaliação: {sum(dicionario["avaliacoes"])/len(dicionario["avaliacoes"])}
-            sinopse: {dicionario["sinopse"]}
+            Ano: {dicionario["ano"]}
+            Paginas: {dicionario["paginas"]}
+            Gênero: {dicionario["genero"]}
+            Avaliação: {sum(dicionario["avaliacoes"])/len(dicionario["avaliacoes"]) if dicionario["avaliacoes"] else "Sem avaliações"}
+            Sinópse: {dicionario["sinopse"]}
             """ + listagem
 
     print(listagem)
 
 
-def cadastrar_livro(identificador: int):
+def cadastrar_livro():
     """
     Essa função cadastra um livro na página com as informações requeridas
     """
-    if identificador in livros:
-        print("Livro com identificação já existe.")
-        return
-
+    if not livros:
+        identificador = "L0"
+    else:
+        chaves_livros = list(livros.keys())
+        padrao = r"\d+"
+        encontrados = re.findall(padrao, chaves_livros[-1])
+        identificador = "L" + str(int(encontrados[0]) + 1)
     titulo = input("Informe o título do livro: ")
     autor = input("Informe o(a) autor(a) do livro: ")
     ano = int(input("Informe o ano de publicação do livro: "))
     paginas = int(input("Informe o número de páginas do livro: "))
     genero = input("Informe o gênero do livro: ")
     sinopse = input("Inclua uma sinopse para o livro: ")
-
     livro = {
         "titulo": titulo,
         "autor": autor,
         "ano": ano,
         "paginas": paginas,
         "genero": genero,
-        "sinopse": sinopse
+        "avaliacoes": [],
+        "sinopse": sinopse,
     }
-
-    livros[identificador] = livro
+    livros.update({f'{identificador}': livro})
     print(f"Livro de identificação nº {identificador} foi cadastrado com sucesso!")
 
+
 def arm_usuario():
+    """
+
+    """
     if not usuarios:
         nome_completo = input("digite seu nome e sobrenome")
         idade = input("digite sua idade")
@@ -130,4 +137,36 @@ def login():
                 continue
 
 
+# MENU DO SISTEMA
 
+login()
+
+while True:
+    funcao_desejada = int(input("""
+    ---------------------------
+    Escreva a função desejada. 
+    ---------------------------
+    0 - Sair
+    1 - Cadastrar usuário
+    2 - Cadastrar livro
+    3 - Lista de lançamentos
+    
+    ------------------------------
+    Digite o número da função: """))
+
+    match funcao_desejada:
+        case 0:
+            print("Volte sempre!")
+            break
+
+        case 1:
+            arm_usuario()
+
+        case 2:
+            cadastrar_livro()
+
+        case 3:
+            listar_livros(livros)
+
+        case _:
+            print("Função não encontrada.")
