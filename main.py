@@ -1,3 +1,4 @@
+
 import re
 
 livros = {
@@ -26,6 +27,24 @@ def listar_livros(livros: dict) -> None:
 
     print(listagem)
 
+def filtros():
+
+    tipo_filtros = int(input("""Escolha o que deseja pesquisar:
+                            1) Autor
+                            2) Gênero """))
+    if tipo_filtros == 1:
+        autor1 = input("Qual autor você deseja buscar?")
+        for chave, livro in livros.items():
+            if livro['autor'] == autor1:
+                print(f"{livro['nome']}")
+
+    elif tipo_filtros == 2:
+        genero1 = input("Qual gênero você deseja buscar?")
+        for chave, livro in livros.items():
+            if livro['genero'] == genero1:
+                print(f"{livro['nome']}")
+
+filtros()
 
 def cadastrar_livro():
     """
@@ -137,6 +156,7 @@ def login():
                 continue
 
 
+
 # MENU DO SISTEMA
 
 login()
@@ -170,3 +190,4 @@ while True:
 
         case _:
             print("Função não encontrada.")
+
