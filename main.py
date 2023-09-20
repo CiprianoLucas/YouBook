@@ -1,4 +1,4 @@
-lista_livros = {
+livros = {
     "L1": {"nome": "O menino", "autor": "Lucas", "lancamento": 2022, "genero": "Infantil", "avaliacoes": [3, 5], "sinopse": "algo legal"},
     "L2": {"nome": "Outro", "autor": "Vanessa", "lancamento": 1990, "genero": "Ação", "avaliacoes": [2, 5], "sinopse": "menos legal"}}
 
@@ -21,5 +21,23 @@ def listar_livros(livros: dict) -> None:
 
     print(listagem)
 
+def filtros():
 
-listar_livros(lista_livros)
+    tipo_filtros = int(input("""Escolha o que deseja pesquisar:
+                            1) Autor
+                            2) Gênero """))
+    if tipo_filtros == 1:
+        autor1 = input("Qual autor você deseja buscar?")
+        for chave, livro in livros.items():
+            if livro['autor'] == autor1:
+                print(f"{livro['nome']}")
+
+    elif tipo_filtros == 2:
+        genero1 = input("Qual gênero você deseja buscar?")
+        for chave, livro in livros.items():
+            if livro['genero'] == genero1:
+                print(f"{livro['nome']}")
+
+filtros()
+
+
