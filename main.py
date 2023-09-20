@@ -44,7 +44,6 @@ def filtros():
             if livro['genero'] == genero1:
                 print(f"{livro['nome']}")
 
-filtros()
 
 def cadastrar_livro():
     """
@@ -170,7 +169,7 @@ while True:
     1 - Cadastrar usuário
     2 - Cadastrar livro
     3 - Lista de lançamentos
-    
+    4 - Filtrar livros
     ------------------------------
     Digite o número da função: """))
 
@@ -187,6 +186,9 @@ while True:
 
         case 3:
             listar_livros(livros)
+
+        case 4:
+            filtros()
 
         case _:
             print("Função não encontrada.")
