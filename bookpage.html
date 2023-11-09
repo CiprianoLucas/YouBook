@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca Online</title>
+    <link rel="stylesheet" href="bookpage.css">
+</head>
+<body>
+    <div class="container">
+        <div class="cadastro">
+            <h1>Cadastre a Biblioteca</h1>
+            <input type="text" id="nomeLivro" placeholder="Nome do Livro" required>
+            <input type="text" id="nomeAutor" placeholder="Nome do Autor" required>
+            <input type="text" id="genero" placeholder="Gênero" required>
+            <input type="text" id="nomeUsuario" placeholder="Nome de Usuário" required>
+            <input type="file" id="pdfInput" accept=".pdf" multiple>
+            <button id="enviarLivros">Enviar PDFs e Cadastrar</button>
+        </div>
+
+        <div class="livros-container">
+            <!-- Livros cadastrados serão exibidos aqui -->
+        </div>
+        
+        <div class="visualizador" style="display: none;">
+            <h2>Visualizador</h2>
+            <iframe id="pdfViewer" width="100%" height="50px" src="" frameborder="0"></iframe>
+            <button id="adicionarLivro" style="display: none;">Adicionar Novos Livros</button>
+        </div>
+    </div>
+
+    <script src="bookpage.js"></script> <!-- Arquivo JavaScript -->
+</body>
+</html>
