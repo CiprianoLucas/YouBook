@@ -1,0 +1,25 @@
+#nav {
+    background-color: red;
+}
+
+i {
+    color: white;
+}
+
+.livros {
+    color: white;
+    padding-bottom: 20px;
+}
+
+div {
+    background-color: black;
+}
+
+p {
+    color: white;
+}
+
+.pfp {
+    width: 70px;
+    height: 70px;
+}
