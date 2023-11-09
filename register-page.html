@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">Cadastre-se</h1>
+        <form class="needs-validation" id="loginForm" novalidate>
+            <div class="form-floating mb-3 mt-3">
+                <input type="email" class="form-control" id="registerEmailInput" placeholder="nome@exemplo.com">
+                <label for="registerEmailInput" class="form-label">E-mail</label>
+                <div class="invalid-feedback">
+                    Por favor, insira um e-mail válido.
+                </div>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" id="userRegisterInput" class="form-control" placeholder="Username" aria-label="Username">
+                <label for="userRegisterInput" class="form-label">Nome de usuário</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" id="registerPasswordInput" class="form-control" placeholder="Senha" required>
+                <label for="registerPasswordInput" class="form-label">Senha</label>
+                <div class="invalid-feedback">
+                    Sua senha deve ter entre 8-20 caracteres, conter letras e números e não conter espaços, caracteres especiais ou emojis. 
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="profilePictureInput" class="form-label">Adicionar foto de perfil</label>
+                <input class="form-control" type="file" id="profilePictureInput">
+            </div>
+            <div class="d-grid">
+                <button class="btn btn-primary" type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
