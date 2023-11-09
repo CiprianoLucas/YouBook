@@ -1,0 +1,18 @@
+#nav{
+    background-color: red;
+    height: 40px;
+}
+
+
+div{
+    background-color: black;
+}
+p{color: white;}
+
+.pfp{
+    width: 70px;
+    height: 70px;
+}
+.col{
+    padding: 10px;
+}
