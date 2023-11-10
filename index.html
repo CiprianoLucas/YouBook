@@ -10,78 +10,88 @@
 <body>
     <main class="container ">
         <!-- Apresentação -->
-        <h1 class="my-5">Bem-vindo ao Youbook!</h1>
-        <p class="mb-5">O Youbook é uma plataforma dedicada a entusiastas da leitura, conectando-os a uma vasta coleção de livros de diversos gêneros e autores. Oferece oportunidades para os leitores descobrirem novos tesouros literários, interagirem com seus autores favoritos, compartilharem suas paixões com a comunidade de leitores, organizarem suas próprias bibliotecas virtuais e participarem de clubes de leitura. O objetivo do Youbook é tornar a experiência de leitura mais envolvente, social e acessível, enriquecendo a jornada literária dos seus usuários.</p>
+        <section>
+            <h1 class="my-5">Bem-vindo ao Youbook!</h1>
+            <p class="mb-5">O Youbook é uma plataforma dedicada a entusiastas da leitura, conectando-os a uma vasta coleção de livros de diversos gêneros e autores. Oferece oportunidades para os leitores descobrirem novos tesouros literários, interagirem com seus autores favoritos, compartilharem suas paixões com a comunidade de leitores, organizarem suas próprias bibliotecas virtuais e participarem de clubes de leitura. O objetivo do Youbook é tornar a experiência de leitura mais envolvente, social e acessível, enriquecendo a jornada literária dos seus usuários.</p>
+        </section>
 
         <!-- Carousel de livros -->
-        <div class="container mb-4">
-            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner" style="height: 30em;">
-                  <div class="carousel-item active h-100" style="background: url(static/img-index/de-primatas-a-astronauta.jpg) center/contain no-repeat;">
+        <section>
+            <h2 class="mb-5">Veja o que você pode encontrar aqui!</h2>
+            <div class="container mb-5">
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" style="height: 30em;">
+                      <div class="carousel-item active h-100" style="background: url(static/img-index/de-primatas-a-astronauta.jpg) center/contain no-repeat;">
+                      </div>
+                      <div class="carousel-item h-100" style="background: url(static/img-index/cerebro-e-crenca.jpg) center/contain no-repeat;">
+                      </div>
+                      <div class="carousel-item h-100" style="background: url(static/img-index/o-livro-do-amor.jpg) center/contain no-repeat;">
+                      </div>
+                      <div class="carousel-item h-100" style="background: url(static/img-index/o-mundo-assombrado-pelos-demonios.jpg) center/contain no-repeat;">
+                      </div>
+                      <div class="carousel-item h-100" style="background: url(static/img-index/subliminar.jpg) center/contain no-repeat;">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
                   </div>
-                  <div class="carousel-item h-100" style="background: url(static/img-index/cerebro-e-crenca.jpg) center/contain no-repeat;">
-                  </div>
-                  <div class="carousel-item h-100" style="background: url(static/img-index/o-livro-do-amor.jpg) center/contain no-repeat;">
-                  </div>
-                  <div class="carousel-item h-100" style="background: url(static/img-index/o-mundo-assombrado-pelos-demonios.jpg) center/contain no-repeat;">
-                  </div>
-                  <div class="carousel-item h-100" style="background: url(static/img-index/subliminar.jpg) center/contain no-repeat;">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-        </div>
+            </div>
+        </section>
+        
             
         <!-- Perguntas e respostas -->
-        <div class="accordion accordion-flush mb-4" id="accordionFlushExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    Como acessar os livros disponíveis?
-                </button>
-                </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Para acessar os livros disponíveis no Youbook é necessário criar uma conta e/ou realizar o login.</div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    É necessário pagar para utilizar?
-                </button>
-                </h2>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Não! A rede social é totalmente gratuíta com o objetivo de facilitar o acesso à cultura por meio dos livros.</div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    Posso publicar os meus livros?
-                </button>
-                </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Sim! Para isso é necessário apenas criar uma conta e publicar os seus livros, eles estarão ficarão disponíveis para todos os usuários da rede social.</div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
-                    Posso obter lucro por meio da publicação dos livros?
+        <section>
+            <h2 class="mb-3">Dúvidas</h2>
+            <div class="accordion accordion-flush mb-4" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Como acessar os livros disponíveis?
                     </button>
-                </h2>
-                <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Não. Devido a rede social ser gratuíta e ter por objetivo facilitar o acesso à cultura da leitura, não haverá contribuição financeira aos autores que concordarem com os termos da rede social.</div>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Para acessar os livros disponíveis no Youbook é necessário criar uma conta e/ou realizar o login.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        É necessário pagar para utilizar?
+                    </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Não! A rede social é totalmente gratuíta com o objetivo de facilitar o acesso à cultura por meio dos livros.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Posso publicar os meus livros?
+                    </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Sim! Para isso é necessário apenas criar uma conta e publicar os seus livros, eles estarão ficarão disponíveis para todos os usuários da rede social.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Posso obter lucro por meio da publicação dos livros?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Não. Devido a rede social ser gratuíta e ter por objetivo facilitar o acesso à cultura da leitura, não haverá contribuição financeira aos autores que concordarem com os termos da rede social.</div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+        
         
     </main>
 </body>
