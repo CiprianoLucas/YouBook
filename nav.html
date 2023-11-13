@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegação e Footer</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="static/js/jquery-3.7.1.min.js"></script>
+    <script src="static/js/jquery-ui.min.js"></script>
+    <script src="static/js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="static/css/jquery-ui.css">
+    <link rel="stylesheet" href="static/css/jquery-ui.min.css">
+</head>
+
+<body>
+
+    <nav class="d-flex column-gap-2 p-1">
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+            aria-controls="offcanvasScrolling"><i class="bi bi-list"></i></button>
+
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+            id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header bg-primary text-light">
+                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">MENU</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+
+                <a href="" class="link-underline link-underline-opacity-0">
+                    <div class="mb-2 p-2 border rounded text-center fs-4 text-dark">Login</div>
+                </a>
+                <a href="" class="link-underline link-underline-opacity-0">
+                    <div class="mb-2 p-2 border rounded text-center fs-4 text-dark">Favoritos</div>
+                </a>
+                </a>
+                <a href="" class="link-underline link-underline-opacity-0">
+                    <div class="mb-2 p-2 border rounded text-center fs-4 text-dark">Página inicial</div>
+                </a>
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+                    data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+                    <h4 id="scrollspyHeading1">First heading</h4>
+                    <p>...</p>
+                    <h4 id="scrollspyHeading2">Second heading</h4>
+                    <p>...</p>
+                    <h4 id="scrollspyHeading3">Third heading</h4>
+                    <p>...</p>
+                    <h4 id="scrollspyHeading4">Fourth heading</h4>
+                    <p>...</p>
+                    <h4 id="scrollspyHeading5">Fifth heading</h4>
+                    <p>...</p>
+                  </div>
+
+                <ul class="list-group list-group-horizontal-sm list-group-flush">
+                    <li class="list-group-item">
+                        <a href="">Perguntas frequentes</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="">Entre em contato</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="">Termos de uso</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="">Conta</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="ui-widget input-group align-self-center">
+            <input type="text" class="form-control bg-light" placeholder="Pesquisar" id="findBook">
+            <i class="bi bi-search input-group-text"></i>
+        </div>
+
+        <a href=""><button type="button" class="btn btn-secondary"><i class="bi bi-person"></i></i></button></a>
+
+    </nav>
+
+
+
+    <footer>
+        <div>
+            <div>
+                <ul class="list-group list-group-horizontal-sm list-group-flush">
+                    <li class="list-group-item">
+                        <a href="">Perguntas frequentes</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="">Entre em contato</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="">Termos de uso</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="">Conta</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p>© Todos os direitos reservados por TheBestOfPython</p>
+    </footer>
+
+
+    <script src="static/js/nav.js"></script>
+</body>
+
+</html>

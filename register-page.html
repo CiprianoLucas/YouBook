@@ -18,28 +18,56 @@
         <h1 class="text-center mt-5">Cadastre-se</h1>
         <form class="needs-validation" id="loginForm" novalidate>
             <div class="form-floating mb-3 mt-3">
-                <input type="email" class="form-control" id="registerEmailInput" placeholder="nome@exemplo.com">
+                <input type="email" class="form-control" name="email" id="registerEmailInput" placeholder="nome@exemplo.com">
                 <label for="registerEmailInput" class="form-label">E-mail</label>
-                <div class="invalid-feedback">
-                    Por favor, insira um e-mail válido.
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" name="registerUsernameInput" id="registerUsernameInput" placeholder="Username" aria-label="Username">
+                <label for="registerUsernameInput" class="form-label">Nome de usuário</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" name="registerPasswordInput" id="registerPasswordInput" placeholder="Senha" required>
+                <label for="registerPasswordInput" class="form-label">Senha</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="cellphone" class="form-control" name="registerCellphoneInput" id="registerCellphoneInput" placeholder="Telefone">
+                <label for="registerCellphoneInput" class="form-label">Telefone</label>
+            </div>
+            <div class="row g-2 mb-3">
+                <div class="col-5">
+                    <label for="zipcode" class="form-label">CEP</label>
+                    <input type="text" class="form-control" name="zipcode" id="registerZipcodeInput" placeholder="Digite seu CEP" aria-label="zipcode">
+                </div>
+                <div class="col">
+                    <label for="address" class="form-label">Endereço</label>
+                    <input type="text" class="form-control" name="address" id="registerAddressInput" aria-label="address">
                 </div>
             </div>
-            <div class="form-floating mb-3">
-                <input type="text" id="userRegisterInput" class="form-control" placeholder="Username" aria-label="Username">
-                <label for="userRegisterInput" class="form-label">Nome de usuário</label>
+            <div class="row g-2 mb-3">
+                <div class="col">
+                    <label for="city" class="form-label">Cidade</label>
+                    <input type="text" class="form-control" name="city" id="registerCityInput" aria-label="city">
+                </div>
+                <div class="col-3">
+                    <label for="state" class="form-label">Estado</label>
+                    <input type="text" class="form-control" name="state" id="registerStateInput" aria-label="state">
+                </div>
             </div>
-            <div class="form-floating mb-3">
-                <input type="password" id="registerPasswordInput" class="form-control" placeholder="Senha" required>
-                <label for="registerPasswordInput" class="form-label">Senha</label>
-                <div class="invalid-feedback">
-                    Sua senha deve ter entre 8-20 caracteres, conter letras e números e não conter espaços, caracteres especiais ou emojis. 
+            <div class="row g-2 mb-3">
+                <div class="col">
+                    <label for="neighborhood" class="form-label">Bairro</label>
+                    <input type="text" class="form-control" name="neighborhood" id="registerNeighborhoodInput" aria-label="neighborhood">
+                </div>
+                <div class="col-5">
+                    <label for="complement" class="form-label">Complemento</label>
+                    <input type="text" class="form-control" name="complement" id="registerComplementInput" aria-label="complement">
                 </div>
             </div>
             <div class="mb-3">
                 <label for="profilePictureInput" class="form-label">Adicionar foto de perfil</label>
                 <input class="form-control" type="file" id="profilePictureInput">
             </div>
-            <div class="d-grid">
+            <div class="d-grid mb-3">
                 <button class="btn btn-primary" type="submit">Cadastrar</button>
             </div>
         </form>
