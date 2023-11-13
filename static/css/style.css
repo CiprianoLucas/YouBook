@@ -1,10 +1,43 @@
 @charset "UTF-8";
 
+/* Colors
+Color1= #591C21
+Color2= #044040
+ */
+
 * {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
-    color: white;
+    color: black;
     text-decoration: none;
+    background-color: #EFF1F3;
+}
+
+button {
+    background: transparent;
+    background-color: #044040;
+    color: white;
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.85em;
+    letter-spacing: 0.15em;
+    line-height: 2em;
+    padding: 0 0.75em;
+    margin-bottom: 0.65em;
+    text-align: center;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #0440408d;
+}
+
+i {
+    cursor: pointer;
+    padding: 0 20px;
 }
