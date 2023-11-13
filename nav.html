@@ -16,17 +16,17 @@
     <script src="static/js/jquery-ui.js"></script>
     <link rel="stylesheet" href="static/css/jquery-ui.css">
     <link rel="stylesheet" href="static/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 
 <body>
 
     <nav class="d-flex column-gap-2 p-1">
-        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
-            aria-controls="offcanvasScrolling"><i class="bi bi-list"></i></button>
+        <button id="button" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-list"></i></button>
 
-        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
-            id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-            <div class="offcanvas-header bg-primary text-light">
+        <div id="offcanvasScrolling" class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" aria-labelledby="offcanvasScrollingLabel">
+            
+            <div id="offcanvas-header" class="offcanvas-header text-light">
                 <h5 class="offcanvas-title" id="offcanvasScrollingLabel">MENU</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
@@ -49,52 +49,36 @@
                     <h4 id="scrollspyHeading2">Second heading</h4>
                     <p>...</p>
                     <h4 id="scrollspyHeading3">Third heading</h4>
-                    <p>...</p>
-                    <h4 id="scrollspyHeading4">Fourth heading</h4>
-                    <p>...</p>
-                    <h4 id="scrollspyHeading5">Fifth heading</h4>
-                    <p>...</p>
-                  </div>
-
-                <ul class="list-group list-group-horizontal-sm list-group-flush">
-                    <li class="list-group-item">
-                        <a href="">Perguntas frequentes</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="">Entre em contato</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="">Termos de uso</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="">Conta</a>
-                    </li>
-                </ul>
-
+                        <p>...</p>
+                        <h4 id="scrollspyHeading4">Fourth heading</h4>
+                        <p>...</p>
+                        <h4 id="scrollspyHeading5">Fifth heading</h4>
+                        <p>...</p>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="ui-widget input-group align-self-center">
-            <input type="text" class="form-control bg-light" placeholder="Pesquisar" id="findBook">
-            <i class="bi bi-search input-group-text"></i>
-        </div>
+            <div class="ui-widget input-group align-self-center">
+                <input type="text" class="form-control bg-light" placeholder="Pesquisar" id="findBook">
+                <i class="bi bi-search input-group-text"></i>
+            </div>
 
-        <a href=""><button type="button" class="btn btn-secondary"><i class="bi bi-person"></i></i></button></a>
+            <a href=""><button id="button" type="button" class="btn btn-secondary"><i class="bi bi-person"></i></i></button></a>
 
-    </nav>
-
+        </nav>
 
 
-    <footer>
-        <div>
+
+        <footer>
             <div>
-                <ul class="list-group list-group-horizontal-sm list-group-flush">
-                    <li class="list-group-item">
-                        <a href="">Perguntas frequentes</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="">Entre em contato</a>
-                    </li>
+                <div>
+                    <ul class="list-group-horizontal-sm list-group-flush">
+                        <li class="list-group-item">
+                            <a href="">Perguntas frequentes</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="">Entre em contato</a>
+                        </li>
                     <li class="list-group-item">
                         <a href="">Termos de uso</a>
                     </li>
