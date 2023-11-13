@@ -5,6 +5,7 @@
 #nav i {
     background-color: #591C21;
     color: white;
+    padding: 0 10px;
 }
 
 #button {
@@ -20,4 +21,8 @@ p {
 .pfp {
     width: 70px;
     height: 70px;
+}
+
+#bi-plus {
+    color: #591C21;
 }

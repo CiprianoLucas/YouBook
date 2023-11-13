@@ -58,18 +58,8 @@ li, a {
     list-style-type: none;
 }
 
-
 nav {
     color: white;
     background-color: #591C21;
     height: 3em;
-}
-
-#button {
-    cursor: pointer;
-    background-color: transparent;
-    text-align: center;
-    color: white;
-    border: 0;
-    height: 1em;
 }
