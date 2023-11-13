@@ -11,8 +11,8 @@ Color2= #044040
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: black;
-    text-decoration: none;
     background-color: #EFF1F3;
+    list-style-type: none;
 }
 
 button {
@@ -39,5 +39,37 @@ button:hover {
 
 i {
     cursor: pointer;
-    padding: 0 20px;
+    background-color: transparent;
+    text-align: center;
+    color: white;
+}
+
+li, a {
+    text-decoration: none;
+    color: black;
+    background-color: transparent;
+    list-style-type: none;
+}
+
+.offcanvas-body, .offcanvas-title, #offcanvas-header {
+    text-decoration: none;
+    color: white;
+    background-color: #591C21;
+    list-style-type: none;
+}
+
+
+nav {
+    color: white;
+    background-color: #591C21;
+    height: 3em;
+}
+
+#button {
+    cursor: pointer;
+    background-color: transparent;
+    text-align: center;
+    color: white;
+    border: 0;
+    height: 1em;
 }
