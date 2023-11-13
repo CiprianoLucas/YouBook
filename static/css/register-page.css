@@ -6,7 +6,6 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
-    color: white;
 }
 
 h1 {
@@ -55,10 +54,3 @@ body {
     transform: translate(-50%);
 }
 
-.form-label {
-    color: #212529;
-}
-
-.g-2 label, #profilePictureLabel {
-    color: white;
-}
