@@ -27,6 +27,16 @@ p {
     height: 70px;
 }
 
+
+#descricao {
+    padding-left: 10px;
+}
+
+#saveDesc {
+    display: none
+}
+
 #bi-plus {
     color: #591C21;
+
 }
