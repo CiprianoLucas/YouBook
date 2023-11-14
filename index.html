@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Biblioteca Online</title>
-    <link rel="stylesheet" href="bookpage.css">
+    <link rel="stylesheet" href="/static/css/bookpage.css">
 </head>
 <body>
+    
     <div class="container">
         <div class="cadastro">
             <h1>Cadastre a Biblioteca</h1>
@@ -23,11 +24,11 @@
         
         <div class="visualizador" style="display: none;">
             <h2>Visualizador</h2>
-            <iframe id="pdfViewer" width="100%" height="50px" src="" frameborder="0"></iframe>
+            <div id="pdfViewer" class="pdf-viewer"></div>
             <button id="adicionarLivro" style="display: none;">Adicionar Novos Livros</button>
         </div>
     </div>
 
-    <script src="bookpage.js"></script> <!-- Arquivo JavaScript -->
+    <script src="/static/js/bookpage.js"></script> <!-- Arquivo JavaScript -->
 </body>
 </html>
