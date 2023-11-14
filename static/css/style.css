@@ -63,3 +63,46 @@ nav {
     background-color: #591C21;
     height: 3em;
 }
+
+.fs-5, #genres, .overflow-y-scroll, #top10 {
+    color: white;
+    background-color: #591C21;
+    cursor: pointer;
+    margin: 0;
+}
+
+li.list-group-item.active {
+    color: white;
+    background-color: #591C21;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: #591C21;
+    border: 0;
+    height: 1em;
+}
+
+#menuOptions {
+    text-decoration: none;
+    list-style: none;
+    font-size: 1em;
+    background-color: #591C21;
+    color: white;
+    border: 0;
+}
+
+footer, .list-group-horizontal-sm.list-group-flush {
+    padding-top: 5px;
+    padding-left: 5px;
+    background: linear-gradient(50deg, rgba(4,64,64,1) 20%, rgba(140, 31, 40, 0.795) 100%);
+    background-attachment: fixed;
+    color: white;
+}
+
+a, .p-2  {
+    color: white;
+    background-color: transparent;
+    text-align: center;
+}
