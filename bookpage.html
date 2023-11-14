@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="/static/css/bookpage.css">
 </head>
 <body>
-<<<<<<< Updated upstream
     
     <div class="container">
         <div class="cadastro">
@@ -16,18 +15,9 @@
             <input type="text" id="genero" placeholder="Gênero" required>
             <input type="text" id="nomeUsuario" placeholder="Nome de Usuário" required>
             <input type="file" id="pdfInput" accept=".pdf" multiple>
+            <input type="file" id="imagemCapaInput" accept="image/*" capture="camera">
             <button id="enviarLivros">Enviar PDFs e Cadastrar</button>
         </div>
-=======
-
-    
-    <main class="container ">
-        <!-- Apresentação -->
-        <section>
-            <h1 class="my-5">Bem-vindo ao Youbook!</h1>
-            <p class="mb-5">O Youbook é uma plataforma dedicada a entusiastas da leitura, conectando-os a uma vasta coleção de livros de diversos gêneros e autores. Oferece oportunidades para os leitores descobrirem novos tesouros literários, interagirem com seus autores favoritos, compartilharem suas paixões com a comunidade de leitores, organizarem suas próprias bibliotecas virtuais e participarem de clubes de leitura. O objetivo do Youbook é tornar a experiência de leitura mais envolvente, social e acessível, enriquecendo a jornada literária dos seus usuários.</p>
-        </section>
->>>>>>> Stashed changes
 
         <div class="livros-container">
             <!-- Livros cadastrados serão exibidos aqui -->
@@ -35,7 +25,7 @@
         
         <div class="visualizador" style="display: none;">
             <h2>Visualizador</h2>
-            <div id="pdfViewer" class="pdf-viewer"></div>
+            <!-- Removido o iframe e substituído por um campo para exibir a imagem de capa -->
             <button id="adicionarLivro" style="display: none;">Adicionar Novos Livros</button>
         </div>
     </div>
