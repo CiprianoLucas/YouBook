@@ -40,7 +40,6 @@ h1 {
 body {
     background: linear-gradient(50deg, rgba(4,64,64,1) 20%, rgba(140, 31, 40, 0.795) 100%);
     background-attachment: fixed;
-    max-width: 300px;
 }
 
 #loginForm, h1 {
@@ -50,7 +49,16 @@ body {
 }
 
 .container {
+    max-width: 400px;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+}
+
+.form-label {
+    color: #212529;
+}
+
+.g-2 label, #profilePictureLabel {
+    color: white;
 }
