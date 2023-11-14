@@ -1,25 +1,32 @@
 #nav {
-    background-color: red;
+    background-color: #591C21;
 }
 
-i {
+body {
+    background-color: #EFF1F3;
+}
+
+#nav i {
+    background-color: #591C21;
     color: white;
+    padding: 0 10px;
 }
 
-.livros {
-    color: white;
-    padding-bottom: 20px;
-}
-
-div {
-    background-color: black;
+#button {
+    text-align: center;
 }
 
 p {
-    color: white;
+    color: black;
+    font-size: 1em;
+    background-color: transparent;
 }
 
 .pfp {
     width: 70px;
     height: 70px;
+}
+
+#bi-plus {
+    color: #591C21;
 }
