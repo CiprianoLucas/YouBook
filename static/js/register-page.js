@@ -77,7 +77,6 @@ $(document).ready(() => {
         }
         saveUserToLocalStorage()
         successToast.show();
-        console.log("teste")
 
     })
 })
