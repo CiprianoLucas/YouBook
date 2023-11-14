@@ -25,3 +25,11 @@ p {
     width: 70px;
     height: 70px;
 }
+
+#descricao {
+    padding-left: 10px;
+}
+
+#saveDesc {
+    display: none
+}
