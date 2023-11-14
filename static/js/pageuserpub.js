@@ -21,24 +21,33 @@ $(document).ready(function () {
     };
 
     const newuser = () => {
-        const newName = $("#editName").val();
-        const newBio = $("#editBio").val();
-
-        $("#userInfo p:first-child strong").text(newName);
-        $("#userInfo p:last-child").text(newBio);
-
+        const $newName = $("#editName");
+        const $newBio = $("#editBio");
+        
+        if ($newName.val().trim() !== ""){
+            $("#userInfo p:first-child strong").text($newName.val());
+        }
+        if ($newBio.val().trim() !== ""){
+            $("#userInfo p:last-child").text($newBio.val());
+        }
         $("#userInput").hide();
         $("#userInfo").show();
         $("#userEdit").show();
+        $newBio.val('');
+        $newName.val('');
     };
 
     const newdesc = () => {
         const $descricaoNova = $("#newAbout");
-        $("#descricao").text($descricaoNova.val());
-
+        
+        if ($descricaoNova.val().trim() !== '') {
+            $("#descricao").text($descricaoNova.val());
+        }
+        
         $("#descricao").show();
         $("#newAbout").hide();
         $("#saveDesc").hide();
+        $descricaoNova.val('')
 
     };
 
@@ -51,5 +60,4 @@ $(document).ready(function () {
     $("#saveDesc").on("click", newdesc);
 
 });
-
 

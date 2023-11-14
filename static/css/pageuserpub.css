@@ -27,7 +27,9 @@ p {
     height: 70px;
 }
 
-
+.sobremim{
+    display: none;
+}
 #descricao {
     padding-left: 10px;
 }
@@ -39,4 +41,21 @@ p {
 #bi-plus {
     color: #591C21;
 
+}
+
+#userInput{
+    display: none;
+}
+
+#newAbout{
+    display: none;
+}
+
+#userEdit{
+    background-color: #EFF1F3 !important;
+}
+
+
+.btn{
+    height: auto !important;
 }
