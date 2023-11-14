@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/css/private-user-page.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="static/js/jquery-3.7.1.min.js"></script>
+    <script src="static/js/jquery-ui.min.js"></script>
+    <script src="static/js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="static/css/jquery-ui.css">
+    <link rel="stylesheet" href="static/css/jquery-ui.min.css">
+ 
+</head>
+<body>
+    <!-- Menu superior -->
+    <nav class="d-flex column-gap-2 p-1">
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+            aria-controls="offcanvasScrolling"><i class="bi bi-list"></i></button>
+
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+            id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header bg-primary text-light">
+                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">MENU</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+
+                <a href="" class="link-underline link-underline-opacity-0">
+                    <div class="mb-2 p-2 border rounded text-center fs-4 text-dark">Login</div>
+                </a>
+                <a href="" class="link-underline link-underline-opacity-0">
+                    <div class="mb-2 p-2 border rounded text-center fs-4 text-dark">Favoritos</div>
+                </a>
+                </a>
+                <a href="" class="link-underline link-underline-opacity-0">
+                    <div class="mb-2 p-2 border rounded text-center fs-4 text-dark">Página inicial</div>
+                </a>
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+                    data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+                    <h4 id="scrollspyHeading1">First heading</h4>
+                    <p>...</p>
+                    <h4 id="scrollspyHeading2">Second heading</h4>
+                    <p>...</p>
+                    <h4 id="scrollspyHeading3">Third heading</h4>
+                    <p>...</p>
+                    <h4 id="scrollspyHeading4">Fourth heading</h4>
+                    <p>...</p>
+                    <h4 id="scrollspyHeading5">Fifth heading</h4>
+                    <p>...</p>
+                  </div>
+
+                <ul class="list-group list-group-horizontal-sm list-group-flush">
+                    <li class="list-group-item">
+                        <a href="">Perguntas frequentes</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="">Entre em contato</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="">Termos de uso</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="">Conta</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="ui-widget input-group align-self-center">
+            <input type="text" class="form-control bg-light" placeholder="Pesquisar" id="findBook">
+            <i class="bi bi-search input-group-text"></i>
+        </div>
+
+        <a href=""><button type="button" class="btn btn-secondary"><i class="bi bi-person"></i></i></button></a>
+
+    </nav>
+
+    <main class="container">
+        <section>
+          <h2>Recomendados:</h2>
+          <!-- Carousel de cards dos recomendados -->
+          <!-- Ao adicionar um novo carousel, é necessário alterar o nome da id da primmeira div, e colocar o mesmo nome nos buttons. Adicionar também o nome da id renomada na lista da constante "carouselIds" no arquivo javascript que possui o mesmo nome do html-->
+          <div id="carouselRecommended" class="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card">
+                  <div class="img-wrapper">
+                    <img src="static/img-index/cerebro-e-crenca.jpg" alt="Cérebro e Crença">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title">Cérebro e Crença</h5>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quaerat iusto similique? Magni, architecto. </p>
+                    <a href="#" class="btn btn-primary">ACESSAR LIVRO</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper">
+                    <img src="static/img-index/de-primatas-a-astronauta.jpg" alt="De Primatas a Astronautas">
+        
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">De Primatas a Astronautas</h5>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quaerat iusto similique? Magni, architecto.</p>
+                    <a href="#" class="btn btn-primary">ACESSAR LIVRO</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper">
+                    <img src="static/img-index/o-livro-do-amor.jpg" alt="O Livro do Amor">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title">O Livro do Amor</h5>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quaerat iusto similique? Magni, architecto.</p>
+                    <a href="#" class="btn btn-primary">ACESSAR LIVRO</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper">
+                    <img src="static/img-index/o-mundo-assombrado-pelos-demonios.jpg" alt="O Mundo Assombrado pelos Demônios">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">O Mundo Assombrado pelos Demônios</h5>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quaerat iusto similique? Magni, architecto.</p>
+                    <a href="#" class="btn btn-primary">ACESSAR LIVRO</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper">
+                    <img src="static/img-index/subliminar.jpg" alt="Subliminar">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Subliminar</h5>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quaerat iusto similique? Magni, architecto.</p>
+                    <a href="#" class="btn btn-primary">ACESSAR LIVRO</a>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <!-- Ao renomear a id de um novo carousel, adicionar o mesmo nome no "data-bs-target" -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselRecommended" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselRecommended" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+            <!-- Fim do carousel de cards -->
+    
+        </section>
+        <section>
+          <h2>Adicionados recentemente:</h2>
+          <!-- Carousel de cards dos adicionados recentemente -->
+          <div id="carouselNews" class="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card">
+                  <div class="img-wrapper">
+                    <img src="static/img-private-user-page/a-cabana.jpg" alt="A Cabana">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title">A Cabana</h5>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quaerat iusto similique? Magni, architecto.</p>
+                    <a href="#" class="btn btn-primary">ACESSAR LIVRO</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper">
+                    <img src="static/img-private-user-page/e-assim-que-acaba.jpg" alt="É assim que acaba">
+        
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">É assim que acaba</h5>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quaerat iusto similique? Magni, architecto.</p>
+                    <a href="#" class="btn btn-primary">ACESSAR LIVRO</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper">
+                    <img src="static/img-private-user-page/o-homem-de-giz.jpg" alt="O Homem de Giz">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title">O Homem de Giz</h5>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quaerat iusto similique? Magni, architecto.</p>
+                    <a href="#" class="btn btn-primary">ACESSAR LIVRO</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper">
+                    <img src="static/img-private-user-page/o-poder-do-habito.jpg" alt="O Poder do Hábito">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">O Poder do Hábito</h5>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quaerat iusto similique? Magni, architecto.</p>
+                    <a href="#" class="btn btn-primary">ACESSAR LIVRO</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper">
+                    <img src="static/img-private-user-page/a-biblioteca-da-meia-noite.jpg" alt="A Biblioteca da Meia-Noite">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">A Biblioteca da Meia-Noite</h5>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quaerat iusto similique? Magni, architecto.</p>
+                    <a href="#" class="btn btn-primary">ACESSAR LIVRO</a>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselNews" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselNews" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+            <!-- Fim do carousel de cards -->
+    
+        </section>
+        <section>
+          <h2>Fantasia:</h2>
+          <!-- Carousel de cards dos Fantasia -->
+          <div id="carouselFantasia" class="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card">
+                  <div class="img-wrapper">
+                    <img src="static/img-private-user-page/a-garota-do-lago.jpeg" alt="...">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title">A Garota do Lago</h5>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quaerat iusto similique? Magni, architecto.</p>
+                    <a href="#" class="btn btn-primary">ACESSAR LIVRO</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper">
+                    <img src="static/img-private-user-page/harry-potter.jpeg" alt="...">
+        
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Harry Potter e as Relíquias da Morte</h5>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quaerat iusto similique? Magni, architecto.</p>
+                    <a href="#" class="btn btn-primary">ACESSAR LIVRO</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper">
+                    <img src="static/img-private-user-page/joyland.jpg" alt="...">
+                  </div>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title">Joyland</h5>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quaerat iusto similique? Magni, architecto.</p>
+                    <a href="#" class="btn btn-primary">ACESSAR LIVRO</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper">
+                    <img src="static/img-private-user-page/morte-no-nilo.jpg" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Morte no Nilo</h5>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quaerat iusto similique? Magni, architecto.</p>
+                    <a href="#" class="btn btn-primary">ACESSAR LIVRO</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper">
+                    <img src="static/img-private-user-page/stephen-king.jpg" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quaerat iusto similique? Magni, architecto.</p>
+                    <a href="#" class="btn btn-primary">ACESSAR LIVRO</a>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselFantasia" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselFantasia" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+            <!-- Fim do carousel de cards -->
+    
+        </section>
+    
+      </main>
+    <!-- Rodapé -->
+      <footer>
+        <div>
+            <div>
+                <ul class="list-group list-group-horizontal-sm list-group-flush">
+                    <li class="list-group-item">
+                        <a href="">Perguntas frequentes</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="">Entre em contato</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="">Termos de uso</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="">Conta</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p>© Todos os direitos reservados por TheBestOfPython</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="static/js/private-user-page.js"></script>
+    <script src="static/js/nav.js"></script>
+</body>
+</html>

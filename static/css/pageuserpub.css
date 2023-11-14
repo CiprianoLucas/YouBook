@@ -9,6 +9,7 @@ body {
 #nav i {
     background-color: #591C21;
     color: white;
+    padding: 0 10px;
 }
 
 #button {
@@ -26,10 +27,16 @@ p {
     height: 70px;
 }
 
+
 #descricao {
     padding-left: 10px;
 }
 
 #saveDesc {
     display: none
+}
+
+#bi-plus {
+    color: #591C21;
+
 }
