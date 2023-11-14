@@ -62,3 +62,7 @@ body {
 .g-2 label, #profilePictureLabel {
     color: white;
 }
+
+#form-label-white {
+    color: white;
+}
