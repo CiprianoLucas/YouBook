@@ -17,7 +17,6 @@ Color2= #044040
 
 button {
     background: transparent;
-    background-color: #044040;
     color: white;
     border-radius: 3px;
     border: 0;
@@ -26,8 +25,7 @@ button {
     font-size: 0.85em;
     letter-spacing: 0.15em;
     line-height: 2em;
-    padding: 0 0.75em;
-    margin-bottom: 0.65em;
+    padding: 5em, 1em;
     text-align: center;
     text-transform: uppercase;
     box-sizing: border-box;
@@ -35,6 +33,7 @@ button {
 
 button:hover {
     background-color: #0440408d;
+    padding: 5em, 1em;
 }
 
 i {
@@ -78,31 +77,28 @@ li.list-group-item.active {
     cursor: pointer;
 }
 
-.btn {
-    background-color: #591C21;
-    border: 0;
-    height: 1em;
-}
-
 #menuOptions {
     text-decoration: none;
     list-style: none;
     font-size: 1em;
-    background-color: #591C21;
-    color: white;
+    background-color: #EFF1F3;
+    color: black;
     border: 0;
 }
 
 footer, .list-group-horizontal-sm.list-group-flush {
     padding-top: 5px;
     padding-left: 5px;
+    margin-top: 1em;
     background: linear-gradient(50deg, rgba(4,64,64,1) 20%, rgba(140, 31, 40, 0.795) 100%);
     background-attachment: fixed;
     color: white;
 }
 
-a, .p-2  {
+#aFooter , .p-2  {
     color: white;
     background-color: transparent;
     text-align: center;
+    padding: 0;
+    margin: 0;
 }

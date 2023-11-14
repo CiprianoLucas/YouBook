@@ -12,8 +12,21 @@ body {
     padding: 0 10px;
 }
 
-#button {
-    text-align: center;
+#button, #book, #about {
+    background: #591C21;
+    padding: 0 10px;
+    margin: 10px;
+    color: white;
+}
+
+#button:hover, #book:hover, #about:hover {
+    background: #591c2188;
+    padding: 0 10px;
+    margin: 10px;
+}
+
+#menu-line {
+    justify-content: center;
 }
 
 p {
@@ -38,5 +51,4 @@ p {
 
 #bi-plus {
     color: #591C21;
-
 }

@@ -1,5 +1,13 @@
 h2 {
     margin: 20px 0 10px 0;
+    letter-spacing: 0.15em;
+    text-align: center;
+}
+
+body {
+    background-color: #EFF1F3;
+    margin: 0;
+    padding: 0;
 }
 
 .img-wrapper {
@@ -59,4 +67,32 @@ img {
 
 .carousel-control-prev:hover, .carousel-control-next:hover {
     opacity: .8;
+}
+
+.container {
+    background-color: transparent;
+    padding: 0;
+}
+
+#button {
+    background: #044040;
+    padding: 0 10px;
+    margin: 10px;
+    color: white;
+}
+
+#button:hover {
+    background: #044040b6;
+    padding: 0 10px;
+    margin: 10px;
+}
+
+.InitialPag {
+    background: linear-gradient(70deg, rgba(4,64,64,1) 20%, rgba(140, 31, 40, 0.795) 100%);
+    background-attachment: fixed;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 0.25em;
 }
