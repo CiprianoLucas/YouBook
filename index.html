@@ -6,19 +6,85 @@
     <title>Youbook</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
-    <main class="container ">
+    <nav class="d-flex column-gap-2 p-1">
+        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-list"></i></button>
+
+        <div id="offcanvasScrolling" class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" aria-labelledby="offcanvasScrollingLabel">
+            
+            <div id="offcanvas-header" class="offcanvas-header text-light">
+                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">MENU</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            
+            <div class="offcanvas-body">
+
+                <a href="login-page.html" class="link-underline link-underline-opacity-0">
+                    <div id="menuOptions" class="mb-3 border rounded text-center fs-4">Login</div>
+                </a>
+                <a href="pageuserpriv.html" class="link-underline link-underline-opacity-0">
+                    <div id="menuOptions" class="mb-3 border rounded text-center fs-4">Favoritos</div>
+                </a>
+                <a href="private-user-page.html" class="link-underline link-underline-opacity-0">
+                    <div id="menuOptions" class="mb-3 border rounded text-center fs-4">Página inicial</div>
+                </a>
+                
+                <div class="overflow-y-scroll mb-5" style="height: 30%">
+                    <ul class="list-group" id="genres">
+                        <li class="list-group-item active">
+                            <h2 class="fs-5 mb-0">Gêneros</h2>
+                        </li>
+                        <li class="list-group-item">Ação</li>
+                        <li class="list-group-item">Aventura</li>
+                        <li class="list-group-item">Científico</li>
+                        <li class="list-group-item">Comédia</li>
+                        <li class="list-group-item">Romance</li>
+                    </ul>
+                </div>
+
+                <div class="overflow-y-scroll" style="height: 30%">
+                    <ul class="list-group" id="top10">
+                        <li class="list-group-item active">
+                            <h2 class="fs-5 mb-0" >TOP 10 mais lidos</h2>
+                        </li>
+                        <li class="list-group-item">Onde estão as flores</li>
+                        <li class="list-group-item">As aventuras de Mike</li>
+                        <li class="list-group-item">Chamando atenção da sorte</li>
+                        <li class="list-group-item">Mais esperto que o diabo</li>
+                        <li class="list-group-item">Café com Deus pai</li>
+                        <li class="list-group-item">Diário de um banana</li>
+                        <li class="list-group-item">Mente de aço</li>
+                        <li class="list-group-item">A vida é cruel</li>
+                        <li class="list-group-item">O Poder do Hábito</li>
+                        <li class="list-group-item">Bíblia Sagrada</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="ui-widget input-group align-self-center">
+            <input type="text" class="form-control bg-light" placeholder="Pesquisar" id="findBook">
+            <i class="bi bi-search input-group-text"></i>
+        </div>
+
+        <button type="button"><i class="bi bi-person"></i></i></button>
+
+    </nav>
+    <main class="container">
         <!-- Apresentação -->
         <section>
-            <h1 class="my-5">Bem-vindo ao Youbook!</h1>
+            <h1 class="my-5"><strong>Bem-vindo ao Youbook!</strong></h1>
             <p class="mb-5">O Youbook é uma plataforma dedicada a entusiastas da leitura, conectando-os a uma vasta coleção de livros de diversos gêneros e autores. Oferece oportunidades para os leitores descobrirem novos tesouros literários, interagirem com seus autores favoritos, compartilharem suas paixões com a comunidade de leitores, organizarem suas próprias bibliotecas virtuais e participarem de clubes de leitura. O objetivo do Youbook é tornar a experiência de leitura mais envolvente, social e acessível, enriquecendo a jornada literária dos seus usuários.</p>
         </section>
 
         <!-- Carousel de livros -->
         <section>
-            <h2 class="mb-5">Veja o que você pode encontrar aqui!</h2>
-            <div class="container mb-5">
+            <h2 class="mb-5"><strong>Veja o que você pode encontrar aqui!</strong></h2>
+            <div class="container">
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner" style="height: 30em;">
                         <!-- As imagens estão nas próprias divs que tem como classe "carousel-item". Elas foram colocadas como background-image para a melhor manipulação do carousel -->
@@ -47,8 +113,8 @@
         
             
         <!-- Perguntas e respostas -->
-        <section>
-            <h2 class="mb-3">Perguntas e respostas</h2>
+        <section class="container">
+            <h2 class="mb-3"><strong>Perguntas frequentes</strong></h2>
             <div class="accordion accordion-flush mb-4" id="accordionFlushExample">
                 <!-- Para adicionar novas perguntas e respostas é necessário copiar toda a div com class "accordion-item", seguindo a ordem numérica no data-bs-target, aria-controls e no id -->
                 <div class="accordion-item">
@@ -93,8 +159,30 @@
                 </div>
             </div>
         </section>
-        
-        
+       
     </main>
+    <footer>
+        <div>
+            <div>
+                <ul class="list-group-horizontal-sm list-group-flush">
+                    <li class="list-group-item">
+                        <a id="aFooter" href="index.html">Perguntas frequentes</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a id="aFooter" href="">Entre em contato</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a id="aFooter" href="">Termos de uso</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a id="aFooter" href="pageuserpriv.html">Conta</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p class="p-2">© Todos os direitos reservados por TheBestOfPython</p>
+    </footer>
+
+    <script src="static/js/nav.js"></script>    
 </body>
 </html>

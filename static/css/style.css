@@ -82,6 +82,7 @@ li.list-group-item.active {
     list-style: none;
     font-size: 1em;
     background-color: #EFF1F3;
+    margin-top: 1em;
     color: black;
     border: 0;
 }
@@ -89,7 +90,6 @@ li.list-group-item.active {
 footer, .list-group-horizontal-sm.list-group-flush {
     padding-top: 5px;
     padding-left: 5px;
-    margin-top: 1em;
     background: linear-gradient(50deg, rgba(4,64,64,1) 20%, rgba(140, 31, 40, 0.795) 100%);
     background-attachment: fixed;
     color: white;
@@ -101,4 +101,17 @@ footer, .list-group-horizontal-sm.list-group-flush {
     text-align: center;
     padding: 0;
     margin: 0;
+}
+
+#button {
+    background: #044040;
+    padding: 0 10px;
+    margin: 10px;
+    color: white;
+}
+
+#button:hover {
+    background: #044040b6;
+    padding: 0 10px;
+    margin: 10px;
 }
