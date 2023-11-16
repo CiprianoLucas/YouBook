@@ -1,13 +1,14 @@
-h2 {
-    margin: 20px 0 10px 0;
-    letter-spacing: 0.15em;
-    text-align: center;
-}
+@charset "UTF-8";
 
 body {
     background-color: #EFF1F3;
-    margin: 0;
-    padding: 0;
+}
+
+h2 {
+    letter-spacing: 0.115em;
+    margin-top: 20px;
+    margin-left: 1em;
+    margin-bottom: 0;
 }
 
 .img-wrapper {
@@ -42,8 +43,6 @@ img {
     .img-wrapper {
         height: 23vw;
     }
-
-
 }
 
 .carousel-inner {
@@ -51,7 +50,7 @@ img {
 }
 
 .card {
-    margin: 0 .5em;
+    margin: 0.5em;
     border-radius: 10px;
     box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, .18);
 }
@@ -74,19 +73,6 @@ img {
     padding: 0;
 }
 
-#button {
-    background: #044040;
-    padding: 0 10px;
-    margin: 10px;
-    color: white;
-}
-
-#button:hover {
-    background: #044040b6;
-    padding: 0 10px;
-    margin: 10px;
-}
-
 .InitialPag {
     background: linear-gradient(70deg, rgba(4,64,64,1) 20%, rgba(140, 31, 40, 0.795) 100%);
     background-attachment: fixed;
@@ -95,4 +81,5 @@ img {
     text-align: center;
     padding: 10px;
     letter-spacing: 0.25em;
+    text-transform: uppercase;
 }

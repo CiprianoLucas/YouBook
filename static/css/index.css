@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.container, body {
+    margin: 0 auto;
+    padding-bottom: 2em;
+    background-color: #EFF1F3;
+}
+
+.my-5 {
+    letter-spacing: 0.065em;
+    text-transform: uppercase;
+}
+
+#nav i {
+    background-color: #591C21;
+    color: white;
+    padding: 0 10px;
+}
+
+p, .accordion-body {
+    letter-spacing: 2px;
+    text-align: justify;
+}
