@@ -77,6 +77,8 @@ $(document).ready(() => {
         }
         saveUserToLocalStorage()
         successToast.show();
-
+        setTimeout(function() {
+            window.location.href = "login-page.html";
+        }, 5000);
     })
 })
