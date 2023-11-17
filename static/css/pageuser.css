@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+body {
+    background-color: #EFF1F3;
+}
+
+#book, #about {
+    background: #591C21;
+    padding: 0 10px;
+    margin: 10px;
+    color: white;
+}
+
+#book:hover, #about:hover {
+    background: #591c2188;
+    padding: 0 10px;
+    margin: 10px;
+}
+
+#menu-line {
+    justify-content: center;
+}
+
+.pfp {
+    width: 70px;
+    height: 70px;
+}
+
+#descricao {
+    padding-left: 10px;
+}
+
+#saveDesc {
+    display: none
+}
+
+#backgroundBanner {
+    background: url(../img-index/chuttersnap-m3ewYVannII-unsplash.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    height: 180px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#backgroundBanner #inner {
+    background-color: rgba(0, 0, 0, 0.288);
+    border-radius: 20px;
+    padding: 50px;
+    color: white;
+    width: 98%;
+    justify-content: center;
+}
+
+#backgroundBanner #inner i {
+    display: inline-block;
+    font-size: 1.5em;;
+    color: white;
+}
+
+#backgroundBanner #inner button {
+    font-size: 1em;;
+    color: white;
+    justify-content: flex-end;
+}
+
+#backgroundBanner #inner h1 {
+    display: inline-block;
+    font-size: 2.5em;
+    text-shadow: 5px 2px 5px black;
+    color: white;
+}
+
+#backgroundBanner #inner p {
+    font-size: 1em;
+    padding: 1em;
+    letter-spacing: 2px;
+    text-shadow: 5px 2px 5px #595958;
+    color: white;
+}
