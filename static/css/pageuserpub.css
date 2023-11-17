@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+body {
+    background-color: #EFF1F3;
+}
+
+#button, #book, #about {
+    background: #591C21;
+    padding: 0 10px;
+    margin: 10px;
+    color: white;
+}
+
+#button:hover, #book:hover, #about:hover {
+    background: #591c2188;
+    padding: 0 10px;
+    margin: 10px;
+}
+
+#menu-line {
+    justify-content: center;
+}
+
+p {
+    color: black;
+    font-size: 1em;
+    background-color: transparent;
+}
+
+.pfp {
+    width: 70px;
+    height: 70px;
+}
+
+
+#descricao {
+    padding-left: 10px;
+}
+
+#saveDesc {
+    display: none
+}
+
+#bi-plus {
+    color: #591C21;
+}

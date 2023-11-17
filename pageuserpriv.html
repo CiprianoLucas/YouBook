@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Settings - Youbook</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/css/pageuserpub.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="static/js/jquery-3.7.1.min.js"></script>
+    <script src="static/js/jquery-ui.js"></script>
+    <script src="static/js/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <nav class="d-flex column-gap-2 p-1">
+        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-list"></i></button>
+
+        <div id="offcanvasScrolling" class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" aria-labelledby="offcanvasScrollingLabel">
+            
+            <div id="offcanvas-header" class="offcanvas-header text-light">
+                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">MENU</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            
+            <div class="offcanvas-body">
+
+                <a href="login-page.html" class="link-underline link-underline-opacity-0">
+                    <div id="menuOptions" class="mb-3 border rounded text-center fs-4">Login</div>
+                </a>
+                <a href="pageuserpriv.html" class="link-underline link-underline-opacity-0">
+                    <div id="menuOptions" class="mb-3 border rounded text-center fs-4">Favoritos</div>
+                </a>
+                <a href="private-user-page.html" class="link-underline link-underline-opacity-0">
+                    <div id="menuOptions" class="mb-3 border rounded text-center fs-4">Página inicial</div>
+                </a>
+                
+                <div class="overflow-y-scroll mb-5" style="height: 30%">
+                    <ul class="list-group" id="genres">
+                        <li class="list-group-item active">
+                            <h2 class="fs-5 mb-0">Gêneros</h2>
+                        </li>
+                        <li class="list-group-item">Ação</li>
+                        <li class="list-group-item">Aventura</li>
+                        <li class="list-group-item">Científico</li>
+                        <li class="list-group-item">Comédia</li>
+                        <li class="list-group-item">Romance</li>
+                    </ul>
+                </div>
+
+                <div class="overflow-y-scroll" style="height: 30%">
+                    <ul class="list-group" id="top10">
+                        <li class="list-group-item active">
+                            <h2 class="fs-5 mb-0" >TOP 10 mais lidos</h2>
+                        </li>
+                        <li class="list-group-item">Onde estão as flores</li>
+                        <li class="list-group-item">As aventuras de Mike</li>
+                        <li class="list-group-item">Chamando atenção da sorte</li>
+                        <li class="list-group-item">Mais esperto que o diabo</li>
+                        <li class="list-group-item">Café com Deus pai</li>
+                        <li class="list-group-item">Diário de um banana</li>
+                        <li class="list-group-item">Mente de aço</li>
+                        <li class="list-group-item">A vida é cruel</li>
+                        <li class="list-group-item">O Poder do Hábito</li>
+                        <li class="list-group-item">Bíblia Sagrada</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="ui-widget input-group align-self-center">
+            <input type="text" class="form-control bg-light" placeholder="Pesquisar" id="findBook">
+            <i class="bi bi-search input-group-text"></i>
+        </div>
+
+        <button type="button"><i class="bi bi-person"></i></i></button>
+
+    </nav>
+
+    <div>
+        <div class="m-0 d-flex p-2 gap-3 align-items-center">
+            <img src="img/pageuser/pfp.jpg" alt="pfp" class="img-thumbnail rounded-circle pfp d-block">
+            <span id="userInfo">
+                <p class="m-0"><strong>Nome</strong></p>
+                <p class="m-0">Bio</p>
+            </span>
+            <div id="userInput" style="display: none;">
+                <input type="text" id="editName" class="form-control" placeholder="Novo nome">
+                <input type="text" id="editBio" class="form-control" placeholder="Nova bio">
+                <button class="btn btn-primary" id="saveEdit">Salvar</button>
+            </div>
+            <button class="btn" id="userEdit"><i class="bi bi-pencil-square text-black"></i></button>
+        </div>
+
+    </div>
+
+    <div id="menu-line" class="p-8 m-2 d-flex align-items-center">
+        <button id="book">Biblioteca</button>
+        <button id="about">Sobre mim</button>
+    </div>
+
+    <div class="min-vh-100">
+
+        <div class="container livros fs-4">
+            <div class="column">
+
+                <div class="col-sm text-center">
+                    <p class="m-0"><strong>Titulo do livro</strong></p>
+                </div>
+
+                <div class="col-sm text-center">
+                    <p>Genero</p>
+                </div>
+
+                <div class="col-sm">
+                    <img src="img/pageuser/capalivro.webp" alt="capa" class="w-100">
+                </div>
+                <div class="text-center p-3">
+                    <button id="button" class="btn">Excluir livro</button>
+                </div>
+                <div class="text-center">
+                    <button id="button" class="btn"><a href="" class="text-decoration-none text-white">Adicionar outro livro</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="text-white sobremim" style="margin: 10px; display: none;">
+            <h3 class="text-black" style="padding-left: 10px;">Sobre mim</h3>
+            
+            <p id="descricao">Escritor apaixonado desde a adolescência, aos 25 anos, mergulho nas palavras
+                para explorar mundos imaginários e expressar as nuances da vida. Cada linha é uma jornada, cada palavra
+                é uma pintura que revela a essência de minhas experiências e visões. Busco a arte de contar histórias
+                para inspirar, questionar e conectar corações através das páginas que construo.
+            </p>
+           
+            
+            <input type="text" id="newAbout" class="form-control" placeholder="Descrição" style="display: none;">
+            <button class="btn btn-primary" id="saveDesc">Salvar</button>
+            
+            <div class="fs-4 d-flex justify-content-center">
+                <a href=""><i class="bi bi-instagram p-2 text-black"></i></a>
+                <a href=""><i class="bi bi-linkedin p-2 text-black"></i></a>
+                <a href=""><i class="bi bi-github p-2 text-black"></i></a>
+                <a href=""><i class="bi bi-twitter p-2 text-black"></i></a>
+            </div>
+            
+            <div class="text-center p-3">
+                <button class="btn btn-primary" id="button">Editar</button>
+            </div>
+        
+        </div>
+    </div>
+    <footer>
+        <div>
+            <div>
+                <ul class="list-group-horizontal-sm list-group-flush">
+                    <li class="list-group-item">
+                        <a id="aFooter" href="index.html">Perguntas frequentes</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a id="aFooter" href="">Entre em contato</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a id="aFooter" href="">Termos de uso</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a id="aFooter" href="pageuserpriv.html">Conta</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p class="p-2">© Todos os direitos reservados por TheBestOfPython</p>
+    </footer>
+
+    <script src="static/js/nav.js"></script>
+    <script src="static/js/pageuserpub.js"></script>
+</body>
+
+</html>
