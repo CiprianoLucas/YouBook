@@ -19,17 +19,27 @@
         <h1 class="text-center mt-5">Entrar</h1>
         <form id="loginForm" novalidate>
             <div class="mb-3 mt-3">
-                <label id="form-label-white" for="exampleFormControlInput1" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
+                <label id="form-label-white" for="emailLoginInput" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="emailLoginInput" placeholder="nome@exemplo.com">
               </div>
               <div class="mb-3">
-                <label id="form-label-white" for="inputPassword5" class="form-label">Senha</label>
-                <input type="password" id="inputPassword5" class="form-control">
+                <label id="form-label-white" for="passwordLoginInput" class="form-label">Senha</label>
+                <input type="password" id="passwordLoginInput" class="form-control">
               </div>
               <div class="d-grid gap-2">
-                <button id="button" class="btn btn-primary" type="button">Login</button>
+                <button id="button" class="btn btn-primary" type="submit">Login</button>
                 <p class="text-center mb-1">Ainda não tem uma conta?</p>
                 <button id="registerButton" class="btn btn-primary" type="button">Cadastre-se</button>
+              </div>
+              <div class="toast align-items-center text-bg-success border-0 m-3 position-fixed bottom-2 end-2" role="alert"
+              aria-live="assertive" aria-atomic="true" id="sucessLoginToast">
+              <div class="d-flex">
+                  <div class="toast-body">
+                      Login efetuado com sucesso!
+                      Você será redirecionado para a tela inicial em 5 segundos.
+                  </div>
+                  <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                      aria-label="Close"></button>
               </div>
         </form>
         <script src="static/js/login-page.js"></script>

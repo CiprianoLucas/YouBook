@@ -38,6 +38,7 @@ $(document).ready(() => {
             .finally();
     });
     $zipcodeInput.mask("00000-000")
+    $phoneInput.mask("(00) 0-0000-0000")
 
     const saveUserToLocalStorage = () => {
         const email = $emailInput.val()
@@ -65,11 +66,12 @@ $(document).ready(() => {
             complement,
             profilePicture
         })
-        localStorage.setItem("user", JSON.stringify(user));
+        localStorage.setItem(`${email}`, JSON.stringify(user));
     }
 
     $registerForm.on("submit", event => {
         event.preventDefault()
+        
         
         if (!$registerForm[0].checkValidity()) {
             $registerForm.addClass("was-validated");
