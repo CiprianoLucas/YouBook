@@ -68,18 +68,17 @@ img {
     opacity: .8;
 }
 
-.container {
-    background-color: transparent;
-    padding: 0;
-}
-
 .InitialPag {
-    background: linear-gradient(70deg, rgba(4,64,64,1) 20%, rgba(140, 31, 40, 0.795) 100%);
-    background-attachment: fixed;
+    background: url(../img-index/chuttersnap-m3ewYVannII-unsplash.jpg) no-repeat;
+    background-size: cover;
+    background-position: end;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    font-size: 2em;
-    text-align: center;
-    padding: 10px;
+    font-size: 2.2em;
+    text-shadow: 5px 5px 5px black;
     letter-spacing: 0.25em;
     text-transform: uppercase;
 }
