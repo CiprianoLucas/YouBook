@@ -37,9 +37,12 @@ $(document).ready(() => {
             .catch(() => console.error("Falha ao realizar a requisição para a API do VIACEP"))
             .finally();
     });
+
+    // Adiciona máscaras aos inputs de CEP e telefone
     $zipcodeInput.mask("00000-000")
     $phoneInput.mask("(00) 0-0000-0000")
 
+    // Salva os dados no localStorage
     const saveUserToLocalStorage = () => {
         const email = $emailInput.val()
         const username = $usernameInput.val()
@@ -69,6 +72,8 @@ $(document).ready(() => {
         localStorage.setItem(`${email}`, JSON.stringify(user));
     }
 
+    // Executa todas as funções ao enviar o cadastro
+    
     $registerForm.on("submit", event => {
         event.preventDefault()
         
