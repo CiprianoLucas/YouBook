@@ -15,7 +15,7 @@ h1 {
     text-transform: uppercase;
 }
 
-#button {
+#button, #registerButton {
     background: transparent;
     background-color: #878787;
     color: white;
