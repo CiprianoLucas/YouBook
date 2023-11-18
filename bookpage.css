@@ -1,0 +1,67 @@
+/* Estilos gerais */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1 {
+    color: #333;
+}
+
+input[type="text"],
+input[type="file"],
+button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+input[type="submit"],
+input[type="file"],
+button {
+    background-color: #3366cc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="file"]:hover,
+button:hover {
+    background-color: #2554a1;
+}
+
+.livros-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.livro {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.livro:hover {
+    cursor: pointer;
+}
+
+.visualizadorPDF {
+    margin-bottom: 10px;
+}
+
+

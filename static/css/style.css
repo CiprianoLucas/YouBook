@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+/* Colors
+Color1= #591C21
+Color2= #044040
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+p {
+    color: black;
+    letter-spacing: 1.5px;
+    text-align: justify;
+}
+
+button {
+    background: transparent;
+    color: white;
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.85em;
+    letter-spacing: 0.15em;
+    line-height: 2em;
+    padding: 5em, 1em;
+    text-align: center;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #0440408d;
+    padding: 5em, 1em;
+}
+
+#button {
+    background: #044040;
+    padding: 0 10px;
+    margin: 10px;
+    color: white;
+}
+
+#button:hover {
+    background: #044040b6;
+    padding: 0 10px;
+    margin: 10px;
+}
+
+i {
+    cursor: pointer;
+    background-color: transparent;
+    text-align: center;
+    color: white;
+}
+
+li, a {
+    text-decoration: none;
+    color: black;
+    background-color: transparent;
+    list-style-type: none;
+}
+
+.offcanvas-body, .offcanvas-title, #offcanvas-header {
+    text-decoration: none;
+    color: white;
+    background-color: #591C21;
+    list-style-type: none;
+}
+
+nav {
+    color: white;
+    background-color: #591C21;
+    height: 3em;
+}
+
+.fs-5, #genres, .overflow-y-scroll, #top10 {
+    color: white;
+    background-color: #591C21;
+    cursor: pointer;
+    margin: 0;
+}
+
+li.list-group-item.active {
+    color: white;
+    background-color: #591C21;
+    border: 0;
+    cursor: pointer;
+}
+
+#menuOptions {
+    text-decoration: none;
+    list-style: none;
+    font-size: 1em;
+    background-color: #EFF1F3;
+    margin-top: 1em;
+    color: black;
+    border: 0;
+}
+
+footer {
+    padding-top: 5px;
+    padding-left: 5px;
+    background: linear-gradient(50deg, rgba(4,64,64,1) 20%, rgba(140, 31, 40, 0.795) 100%);
+    background-attachment: fixed;
+    color: white;
+}
+
+#aFooter, .list-group-horizontal-sm.list-group-flush  {
+    color: white;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.p-2 {
+    text-align: center;
+    color: white;
+    margin: 0;
+}

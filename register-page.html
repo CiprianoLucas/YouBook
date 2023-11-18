@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Youbook</title>
+    <script src="static/js/jquery-3.7.1.min.js"></script>
+    <script src="static/js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+        integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="static/css/login-page.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">Cadastre-se</h1>
+        <!-- Formulário de registro -->
+        <form id="registerForm" novalidate>
+            <div class="form-floating mb-3 mt-3">
+                <input type="email" class="form-control" name="email" id="registerEmailInput" placeholder="nome@exemplo.com">
+                <label for="email" class="form-label">E-mail</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" name="username" id="registerUsernameInput" placeholder="Username" aria-label="username">
+                <label for="username" class="form-label">Nome de usuário</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" name="password" id="registerPasswordInput" placeholder="Senha" required>
+                <label for="password" class="form-label">Senha</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="cellphone" class="form-control" name="registerPhoneInput" id="registerPhoneInput" placeholder="Telefone">
+                <label for="registerPhoneInput" class="form-label">Telefone</label>
+            </div>
+            <div class="row g-2 mb-3">
+                <div class="col-5">
+                    <label for="zipcode" class="form-label">CEP</label>
+                    <input type="text" class="form-control" name="zipcode" id="registerZipcodeInput" placeholder="Digite seu CEP" aria-label="zipcode">
+                </div>
+                <div class="col">
+                    <label for="address" class="form-label">Endereço</label>
+                    <input type="text" class="form-control" name="address" id="registerAddressInput" aria-label="address">
+                </div>
+            </div>
+            <div class="row g-2 mb-3">
+                <div class="col">
+                    <label for="city" class="form-label">Cidade</label>
+                    <input type="text" class="form-control" name="city" id="registerCityInput" aria-label="city">
+                </div>
+                <div class="col-3">
+                    <label for="state" class="form-label">Estado</label>
+                    <input type="text" class="form-control" name="state" id="registerStateInput" aria-label="state">
+                </div>
+            </div>
+            <div class="row g-2 mb-3">
+                <div class="col">
+                    <label for="neighborhood" class="form-label">Bairro</label>
+                    <input type="text" class="form-control" name="neighborhood" id="registerNeighborhoodInput" aria-label="neighborhood">
+                </div>
+                <div class="col-5">
+                    <label for="complement" class="form-label">Complemento</label>
+                    <input type="text" class="form-control" name="complement" id="registerComplementInput" aria-label="complement">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label id="form-label-white" for="profilePictureInput" class="form-label">Adicionar foto de perfil</label>
+                <input type="file" class="form-control" name="profilePicture" id="profilePictureInput">
+            </div>
+            <div class="d-grid mb-3">
+                <button id="button" class="btn" type="submit" id="formSubmitButton">Cadastrar</button>
+            </div>
+        </form>
+        <!-- Toast de cadastro bem sucedido -->
+        <div class="toast align-items-center text-bg-success border-0 m-3 position-fixed bottom-2 end-0" role="alert"
+        aria-live="assertive" aria-atomic="true" id="successToast">
+        <div class="d-flex">
+            <div class="toast-body">
+                Usuário cadastrado com sucesso! 
+                Você será redirecionado para tela de login em 5 segundos.
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                aria-label="Close"></button>
+        </div>
+    </div>
+    </div>
+    <script src="static/js/register-page.js"></script>
+</body>
+</html>

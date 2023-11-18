@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+body {
+    background-color: #EFF1F3;
+}
+
+.container {
+    padding-bottom: 2em;
+    background-color: #EFF1F3;
+}
+
+.my-3 {
+    letter-spacing: 0.065em;
+    text-transform: uppercase;
+}
+
+#nav i {
+    background-color: #591C21;
+    color: white;
+    padding: 0 10px;
+}
+
+.accordion-body {
+    letter-spacing: 2px;
+    text-align: justify;
+}
+
+#banner {
+    background: url(../img-index/chuttersnap-m3ewYVannII-unsplash.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 30px;
+    padding: 30px;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner .inner {
+    position: relative;
+    text-align: center;
+}
+
+#banner .inner h1 {
+    display: inline-block;
+    font-size: 2.5em;
+    text-shadow: 5px 2px 5px black;
+    color: white;
+}
+
+#banner .inner p {
+    font-size: 1em;
+    padding: 1em;
+    letter-spacing: 2px;
+    text-shadow: 5px 2px 5px #595958;
+    background-color: rgba(0, 0, 0, 0.452);
+    color: white;
+}
