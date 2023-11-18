@@ -26,6 +26,14 @@ body {
     height: 70px;
 }
 
+#showEdit, #saveEdit, #saveDesc, #showEditIcon {
+    background: #044040;
+    padding: 0 10px;
+    margin: 10px;
+    color: white;
+    border-color: #044040;
+}
+
 #descricao {
     padding-left: 10px;
 }
