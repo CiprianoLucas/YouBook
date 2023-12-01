@@ -21,14 +21,13 @@ CREATE TABLE IF NOT EXISTS public.leituras
 (
     id serial PRIMARY KEY,
     titulo character varying(256) NOT NULL,
-    genero character varying(256),
     id_usuario integer NOT NULL,
     lancamento date,
     isbn character varying(13) UNIQUE,
     capa character varying(256)
 );
 
-CREATE TABLE IF NOT EXISTS public.rades_sociais
+CREATE TABLE IF NOT EXISTS public.redes_sociais
 (
     id serial PRIMARY KEY,
     nome_rede character varying(256) NOT NULL
@@ -47,12 +46,12 @@ CREATE TABLE IF NOT EXISTS public.favoritos
     PRIMARY KEY (usuario_id, leitura_id)
 );
 
-CREATE TABLE IF NOT EXISTS public.rades_sociais_usuarios
+CREATE TABLE IF NOT EXISTS public.redes_sociais_usuarios
 (
-    rade_social_id integer,
+    rede_social_id integer,
     usuario_id integer,
     url character varying(256) NOT NULL,
-    PRIMARY KEY (rade_social_id, usuario_id)
+    PRIMARY KEY (rede_social_id, usuario_id)
 );
 
 CREATE TABLE IF NOT EXISTS public.generos_leituras
@@ -111,14 +110,14 @@ ALTER TABLE IF EXISTS public.favoritos
     ON DELETE CASCADE;
 
 
-ALTER TABLE IF EXISTS public.rades_sociais_usuarios
-    ADD FOREIGN KEY (rade_social_id)
-    REFERENCES public.rades_sociais (id)
+ALTER TABLE IF EXISTS public.redes_sociais_usuarios
+    ADD FOREIGN KEY (rede_social_id)
+    REFERENCES public.redes_sociais (id)
     ON UPDATE CASCADE
     ON DELETE CASCADE;
 
 
-ALTER TABLE IF EXISTS public.rades_sociais_usuarios
+ALTER TABLE IF EXISTS public.redes_sociais_usuarios
     ADD FOREIGN KEY (usuario_id)
     REFERENCES public.usuarios (id)
     ON UPDATE CASCADE
@@ -194,4 +193,6 @@ ALTER TABLE IF EXISTS public.acessos_usuario
     REFERENCES public.usuarios (id)
     ON UPDATE CASCADE
     ON DELETE CASCADE;
+	
+
 
