@@ -1,3 +1,15 @@
+-- DROP TABLE IF EXISTS public.acessos;
+-- DROP TABLE IF EXISTS public.acessos_usuario;
+-- DROP TABLE IF EXISTS public.favoritos;
+-- DROP TABLE IF EXISTS public.generos_leituras;
+-- DROP TABLE IF EXISTS public.preferencia_generos;
+-- DROP TABLE IF EXISTS public.generos;
+-- DROP TABLE IF EXISTS public.redes_sociais_usuarios;
+-- DROP TABLE IF EXISTS public.redes_sociais;
+-- DROP TABLE IF EXISTS public.leituras;
+-- DROP TABLE IF EXISTS public.seguidores;
+-- DROP TABLE IF EXISTS public.usuarios;
+
 CREATE TABLE IF NOT EXISTS public.usuarios
 (
     id serial PRIMARY KEY,
