@@ -1,9 +1,15 @@
 
--- TRUNCATE usuarios RESTART IDENTITY CASCADE;
--- TRUNCATE redes_sociais RESTART IDENTITY CASCADE;
--- TRUNCATE redes_sociais_usuarios RESTART IDENTITY CASCADE;
--- TRUNCATE seguidores  RESTART IDENTITY CASCADE;
--- TRUNCATE acessos_usuario RESTART IDENTITY CASCADE;
+TRUNCATE usuarios RESTART IDENTITY CASCADE;
+TRUNCATE redes_sociais RESTART IDENTITY CASCADE;
+TRUNCATE redes_sociais_usuarios RESTART IDENTITY CASCADE;
+TRUNCATE seguidores  RESTART IDENTITY CASCADE;
+TRUNCATE acessos_usuario RESTART IDENTITY CASCADE;
+TRUNCATE leituras RESTART IDENTITY CASCADE;
+TRUNCATE favoritos RESTART IDENTITY CASCADE;
+TRUNCATE acessos RESTART IDENTITY CASCADE;
+TRUNCATE generos RESTART IDENTITY CASCADE;
+TRUNCATE generos_leituras RESTART IDENTITY CASCADE;
+TRUNCATE preferencia_generos RESTART IDENTITY CASCADE;
 
 INSERT INTO public.redes_sociais (nome_rede) VALUES ('Facebook');
 INSERT INTO public.redes_sociais (nome_rede) VALUES ('Twitter');
@@ -561,6 +567,782 @@ INSERT INTO public.acessos_usuario (visitado_id, visitante_id) VALUES (3, 18);
 INSERT INTO public.acessos_usuario (visitado_id, visitante_id) VALUES (4, 18);
 INSERT INTO public.acessos_usuario (visitado_id, visitante_id) VALUES (5, 18);
 
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Aventuras na Cidade', 1, '2023-01-15', '1', 'aventuras.jpg');
 
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Segredos do Universo', 45, '2022-05-20', '2', 'universo.jpg');
 
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Romance Proibido', 78, '2023-08-10', '3', 'romance.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Viagem ao Desconhecido', 12, '2022-11-02', '4', 'viagem.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Mistérios da Floresta', 89, '2023-04-18', '5', 'floresta.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Noites de Insônia', 34, '2022-07-07', '6', 'insonia.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Revolução Tecnológica', 56, '2023-02-28', '7', 'tecnologia.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Poder da Imaginação', 90, '2022-10-15', '8', 'imaginacao.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Códigos do Passado', 23, '2023-06-05', '9', 'codigos.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Amores Virtuais', 67, '2022-12-25', '10', 'amores.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('A Ciência do Equilíbrio', 88, '2023-03-12', '11', 'equilibrio.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Drama no Espaço', 10, '2022-09-08', '12', 'espaco.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Poemas da Meia-Noite', 79, '2023-01-01', '13', 'poemas.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Investigações Policiais', 45, '2022-04-09', '14', 'investigacoes.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Segredo do Enigma', 30, '2023-07-20', '15', 'enigma.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Fantasia Medieval', 99, '2022-11-30', '16', 'fantasia.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('A Arte da Guerra Moderna', 15, '2023-05-16', '17', 'guerra.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Renascer das Cinzas', 50, '2022-08-22', '18', 'cinzas.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Pintando o Mundo', 76, '2023-04-01', '19', 'pintando.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Viagem ao Centro da Mente', 5, '2022-12-10', '20', 'mente.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('A Conspiração dos Códigos', 25, '2023-09-05', '21', 'conspiracao.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Memórias do Futuro', 72, '2022-10-30', '22', 'memorias.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Último Refúgio', 18, '2023-03-20', '23', 'refugio.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Caminhos da Liberdade', 85, '2022-06-15', '24', 'liberdade.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Invenções do Amanhã', 40, '2023-01-25', '25', 'invencoes.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Sinfonia das Estrelas', 60, '2022-08-18', '26', 'estrelas.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Amor Além do Tempo', 13, '2023-04-05', '27', 'tempo.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Poder da Natureza', 95, '2022-11-12', '28', 'natureza.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('No Limiar da Realidade', 32, '2023-02-10', '29', 'realidade.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Mistérios do Submundo', 70, '2022-07-28', '30', 'submundo.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Céu é o Limite', 22, '2023-05-02', '31', 'ceu.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Trilhas da Aventura', 55, '2022-12-15', '32', 'trilhas.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Jogo dos Destinos', 80, '2023-08-08', '33', 'destinos.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Enigma da Existência', 38, '2022-09-20', '34', 'existencia.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Paixão Cósmica', 65, '2023-06-22', '35', 'cosmica.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('A Revolução das Palavras', 8, '2022-10-01', '36', 'palavras.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Mistério do Deserto', 50, '2023-03-30', '37', 'deserto.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('A Magia do Saber', 75, '2022-12-08', '38', 'magia.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Segredos do Passado', 3, '2023-07-10', '39', 'passado.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Aventuras na Cidade', 1, '2023-01-15', '40', 'aventuras.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Segredos do Universo', 45, '2022-05-20', '41', 'universo.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Romance Proibido', 78, '2023-08-10', '42', 'romance.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Viagem ao Desconhecido', 12, '2022-11-02', '43', 'viagem.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Mistérios da Floresta', 89, '2023-04-18', '44', 'floresta.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Noites de Insônia', 34, '2022-07-07', '45', 'insonia.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Revolução Tecnológica', 56, '2023-02-28', '46', 'tecnologia.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Poder da Imaginação', 90, '2022-10-15', '47', 'imaginacao.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Códigos do Passado', 23, '2023-06-05', '48', 'codigos.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Amores Virtuais', 67, '2022-12-25', '49', 'amores.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('A Ciência do Equilíbrio', 88, '2023-03-12', '50', 'equilibrio.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Drama no Espaço', 10, '2022-09-08', '151', 'espaco.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Poemas da Meia-Noite', 79, '2023-01-01', '52', 'poemas.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Investigações Policiais', 45, '2022-04-09', '53', 'investigacoes.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Segredo do Enigma', 30, '2023-07-20', '54', 'enigma.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Fantasia Medieval', 99, '2022-11-30', '55', 'fantasia.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('A Arte da Guerra Moderna', 15, '2023-05-16', '56', 'guerra.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Renascer das Cinzas', 50, '2022-08-22', '57', 'cinzas.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Pintando o Mundo', 76, '2023-04-01', '58', 'pintando.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Viagem ao Centro da Mente', 5, '2022-12-10', '59', 'mente.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('A Conspiração dos Códigos', 25, '2023-09-05', '60', 'conspiracao.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Memórias do Futuro', 72, '2022-10-30', '61', 'memorias.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Último Refúgio', 18, '2023-03-20', '62', 'refugio.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Caminhos da Liberdade', 85, '2022-06-15', '63', 'liberdade.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Invenções do Amanhã', 40, '2023-01-25', '64', 'invencoes.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Sinfonia das Estrelas', 60, '2022-08-18', '65', 'estrelas.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Amor Além do Tempo', 13, '2023-04-05', '66', 'tempo.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Poder da Natureza', 95, '2022-11-12', '67', 'natureza.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('No Limiar da Realidade', 32, '2023-02-10', '68', 'realidade.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Mistérios do Submundo', 70, '2022-07-28', '69', 'submundo.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Céu é o Limite', 22, '2023-05-02', '70', 'ceu.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Trilhas da Aventura', 55, '2022-12-15', '71', 'trilhas.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Jogo dos Destinos', 80, '2023-08-08', '72', 'destinos.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Enigma da Existência', 38, '2022-09-20', '73', 'existencia.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Paixão Cósmica', 65, '2023-06-22', '74', 'cosmica.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('A Revolução das Palavras', 8, '2022-10-01', '75', 'palavras.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Mistério do Deserto', 50, '2023-03-30', '76', 'deserto.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('A Magia do Saber', 75, '2022-12-08', '77', 'magia.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Segredos do Passado', 3, '2023-07-10', '78', 'passado.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('A Dança das Estações', 92, '2023-04-12', '79', 'estacoes.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Labirinto dos Sonhos', 47, '2022-10-20', '80', 'labirinto.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Despertar do Dragão', 14, '2023-01-20', '81', 'dragao.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Tragédia na Montanha', 68, '2022-06-28', '82', 'montanha.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Código Perdido', 42, '2023-02-25', '83', 'codigoperdido.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Raios de Esperança', 77, '2022-08-25', '84', 'esperanca.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Pássaros da Noite', 11, '2023-05-15', '85', 'passaros.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Poder da Mente', 98, '2022-11-18', '86', 'podermente.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Sombras do Passado', 29, '2023-03-15', '87', 'sombras.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Mistério das Profundezas', 64, '2022-07-10', '88', 'profundezas.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Caminhos da Sabedoria', 19, '2023-06-02', '89', 'sabedoria.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('A Bruxa do Pântano', 53, '2022-12-05', '90', 'bruxa.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Desafio do Tempo', 84, '2023-09-18', '91', 'tempo.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Além das Fronteiras', 37, '2022-09-30', '92', 'fronteiras.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Céu Noturno', 59, '2023-01-30', '93', 'ceu_noturno.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('A Dança dos Elementos', 6, '2022-10-10', '94', 'elementos.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Segredo das Runas', 43, '2023-04-20', '95', 'runas.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Mistério do Oceano', 71, '2022-12-15', '96', 'oceano.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('A Sombra do Destino', 2, '2023-07-15', '97', 'sombra.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('A Última Fronteira', 26, '2022-12-20', '98', 'ultima_fronteira.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Pétalas de Esperança', 49, '2023-02-20', '99', 'petalas.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Portal Mágico', 16, '2022-11-25', '100', 'portal_magico.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Labirinto do Conhecimento', 83, '2023-06-10', '101', 'labirinto_conhecimento.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Código Celestial', 44, '2022-07-15', '102', 'codigo_celestial.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Rumo ao Infinito', 61, '2023-03-25', '103', 'rumo_infinito.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Alquimia do Tempo', 9, '2022-08-28', '104', 'alquimia_tempo.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Jardim das Ilusões', 96, '2023-01-10', '105', 'jardim_ilusoes.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Mistério do Véu', 28, '2023-04-08', '9780011223345', 'misterio_veu.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('A Jornada do Herói', 62, '2022-09-05', '9781122334455', 'jornada_heroi.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('A Fortaleza Inabalável', 15, '2023-02-15', '9782233445566', 'fortaleza.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Despertar da Magia', 51, '2022-07-20', '9783344556677', 'despertar_magia.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Entre Mundos', 87, '2023-06-30', '9784455667788', 'entre_mundos.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('O Legado Perdido', 36, '2022-11-10', '9785566778899', 'legado_perdido.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('A Dança das Sombras', 69, '2023-01-28', '9786677889900', 'danca_sombras.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Rumo ao Desconhecido', 4, '2022-10-25', '9787788990011', 'rumo_desconhecido.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('A Chama Eterna', 58, '2023-03-18', '9788899001122', 'chama_eterna.jpg');
+
+INSERT INTO public.leituras (titulo, id_usuario, lancamento, isbn, capa)
+VALUES ('Mundos Paralelos', 33, '2022-08-15', '9789900112233', 'mundos_paralelos.jpg');
+
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (1, 1);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (1, 2);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (1, 3);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (1, 4);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (1, 5);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (2, 1);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (2, 2);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (2, 3);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (2, 4);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (2, 5);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (3, 1);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (3, 2);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (3, 3);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (3, 4);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (3, 5);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (4, 1);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (4, 2);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (4, 3);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (4, 4);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (4, 5);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (5, 1);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (5, 2);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (5, 3);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (5, 4);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (5, 5);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (1, 6);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (1, 7);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (1, 8);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (1, 9);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (1, 10);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (2, 6);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (2, 7);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (2, 8);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (2, 9);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (2, 10);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (3, 6);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (3, 7);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (3, 8);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (3, 9);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (3, 10);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (4, 6);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (4, 7);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (4, 8);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (4, 9);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (4, 10);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (5, 6);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (5, 7);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (5, 8);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (5, 9);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (5, 10);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (1, 11);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (1, 12);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (1, 13);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (1, 14);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (1, 15);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (2, 11);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (2, 12);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (2, 13);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (2, 14);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (2, 15);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (3, 11);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (3, 12);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (3, 13);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (3, 14);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (3, 15);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (4, 11);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (4, 12);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (4, 13);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (4, 14);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (4, 15);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (5, 11);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (5, 12);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (5, 13);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (5, 14);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (5, 15);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (1, 16);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (1, 17);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (1, 18);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (1, 19);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (1, 20);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (2, 16);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (2, 17);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (2, 18);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (2, 19);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (2, 20);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (3, 16);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (3, 17);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (3, 18);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (3, 19);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (3, 20);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (4, 16);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (4, 17);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (4, 18);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (4, 19);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (4, 20);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (5, 16);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (5, 17);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (5, 18);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (5, 19);
+INSERT INTO public.favoritos (usuario_id, leitura_id) VALUES (5, 20);
+
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 1);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 2);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 3);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 4);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 5);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 6);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 7);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 8);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 9);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 10);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 11);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 12);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 13);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 14);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 15);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 16);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 17);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 18);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 19);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 20);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 21);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 22);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 23);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 24);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 25);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 26);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 27);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 28);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 29);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (1, 30);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (2, 1);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (2, 2);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (2, 3);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (2, 4);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (2, 5);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (2, 6);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (2, 7);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (2, 8);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (2, 9);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (2, 10);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (3, 1);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (3, 2);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (3, 3);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (3, 4);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (3, 5);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (3, 6);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (3, 7);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (3, 8);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (3, 9);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (3, 10);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (3, 11);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (3, 12);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (3, 13);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (3, 14);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (3, 15);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (3, 16);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (3, 17);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (3, 18);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (3, 19);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (3, 20);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (4, 11);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (4, 12);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (4, 13);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (4, 14);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (4, 15);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (4, 16);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (4, 17);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (4, 18);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (4, 19);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (4, 20);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (4, 21);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (4, 22);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (4, 23);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (4, 24);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (4, 25);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (5, 21);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (5, 22);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (5, 23);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (5, 24);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (5, 25);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (5, 26);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (5, 27);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (5, 28);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (5, 29);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (5, 30);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (6, 21);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (6, 22);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (6, 23);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (6, 24);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (6, 25);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (6, 26);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (6, 27);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (6, 28);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (6, 29);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (6, 30);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (7, 21);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (7, 22);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (7, 23);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (7, 24);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (7, 25);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (7, 26);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (7, 27);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (7, 28);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (7, 29);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (7, 30);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (8, 21);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (8, 22);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (8, 23);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (8, 24);
+INSERT INTO public.acessos (usuario_id, leitura_id) VALUES (8, 25);
+
+INSERT INTO public.generos (genero) VALUES ('Ação');
+INSERT INTO public.generos (genero) VALUES ('Comédia');
+INSERT INTO public.generos (genero) VALUES ('Drama');
+INSERT INTO public.generos (genero) VALUES ('Romance');
+INSERT INTO public.generos (genero) VALUES ('Ficção Científica');
+INSERT INTO public.generos (genero) VALUES ('Terror');
+INSERT INTO public.generos (genero) VALUES ('Animação');
+INSERT INTO public.generos (genero) VALUES ('Fantasia');
+INSERT INTO public.generos (genero) VALUES ('Suspense');
+INSERT INTO public.generos (genero) VALUES ('Documentário');
+INSERT INTO public.generos (genero) VALUES ('Mistério');
+INSERT INTO public.generos (genero) VALUES ('Aventura');
+INSERT INTO public.generos (genero) VALUES ('Crime');
+INSERT INTO public.generos (genero) VALUES ('Musical');
+INSERT INTO public.generos (genero) VALUES ('Western');
+INSERT INTO public.generos (genero) VALUES ('Histórico');
+INSERT INTO public.generos (genero) VALUES ('Guerra');
+INSERT INTO public.generos (genero) VALUES ('Biografia');
+INSERT INTO public.generos (genero) VALUES ('Esporte');
+
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (1, 1);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (1, 2);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (1, 3);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (1, 4);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (1, 5);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (1, 6);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (1, 7);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (1, 8);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (1, 9);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (1, 10);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (2, 1);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (2, 2);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (2, 3);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (2, 4);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (2, 5);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (2, 6);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (2, 7);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (2, 8);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (2, 9);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (2, 10);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (3, 1);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (3, 2);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (3, 3);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (3, 4);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (3, 5);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (3, 6);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (3, 7);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (3, 8);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (3, 9);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (3, 10);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (4, 1);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (4, 2);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (4, 3);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (4, 4);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (4, 5);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (4, 6);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (4, 7);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (4, 8);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (4, 9);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (4, 10);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (5, 1);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (5, 2);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (5, 3);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (5, 4);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (5, 5);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (5, 6);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (5, 7);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (5, 8);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (5, 9);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (5, 10);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (6, 1);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (6, 2);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (6, 3);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (6, 4);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (6, 5);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (6, 6);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (6, 7);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (6, 8);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (6, 9);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (6, 10);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (7, 1);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (7, 2);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (7, 3);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (7, 4);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (7, 5);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (7, 6);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (7, 7);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (7, 8);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (7, 9);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (7, 10);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (8, 1);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (8, 2);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (8, 3);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (8, 4);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (8, 5);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (8, 6);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (8, 7);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (8, 8);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (8, 9);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (8, 10);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (9, 1);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (9, 2);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (9, 3);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (9, 4);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (9, 5);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (9, 6);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (9, 7);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (9, 8);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (9, 9);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (9, 10);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (10, 1);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (10, 2);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (10, 3);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (10, 4);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (10, 5);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (10, 6);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (10, 7);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (10, 8);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (10, 9);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (10, 10);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (11, 1);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (11, 2);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (11, 3);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (11, 4);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (11, 5);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (11, 6);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (11, 7);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (11, 8);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (11, 9);
+INSERT INTO public.generos_leituras (genero_id, leitura_id) VALUES (11, 10);
+
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (1, 1);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (2, 1);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (2, 2);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (2, 3);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (2, 4);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (2, 5);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (2, 6);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (2, 7);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (2, 8);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (2, 9);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (2, 10);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (3, 1);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (3, 2);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (3, 3);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (3, 4);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (3, 5);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (3, 6);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (3, 7);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (3, 8);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (3, 9);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (3, 10);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (1, 2);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (1, 3);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (1, 4);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (1, 5);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (1, 6);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (1, 7);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (1, 8);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (1, 9);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (1, 10);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (4, 1);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (4, 2);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (4, 3);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (4, 4);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (4, 5);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (4, 6);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (4, 7);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (4, 8);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (4, 9);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (4, 10);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (5, 1);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (5, 2);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (5, 3);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (5, 4);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (5, 5);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (5, 6);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (5, 7);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (5, 8);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (5, 9);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (5, 10);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (8, 1);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (8, 2);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (8, 3);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (8, 4);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (8, 5);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (8, 6);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (8, 7);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (8, 8);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (8, 9);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (8, 10);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (9, 1);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (9, 2);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (9, 3);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (9, 4);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (9, 5);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (9, 6);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (9, 7);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (9, 8);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (9, 9);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (9, 10);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (10, 1);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (10, 2);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (10, 3);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (10, 4);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (10, 5);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (10, 6);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (10, 7);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (10, 8);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (10, 9);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (10, 10);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (11, 1);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (11, 2);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (11, 3);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (11, 4);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (11, 5);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (11, 6);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (11, 7);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (11, 8);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (11, 9);
+INSERT INTO public.preferencia_generos (usuario_id, genero_id) VALUES (11, 10);
 
